@@ -1,0 +1,101 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-size: 62,5%;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  /* background-color: #393e46; */
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+
+.form__label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.2rem;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.3s;
+  transform: translateY(0rem);
+}
+
+.form__input {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  font-size: 1rem;
+  margin: 0 auto;
+  padding: 1rem 1rem;
+  border-radius: 0.2rem;
+  background-color: #eeeeee;
+  border: none;
+  width: 450px;
+  display: block;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-4rem);
+  transform: translateY(-4rem);
+}
+
+.alignment {
+    text-align: center;
+}
+.button {
+    background-color: #1b262c;
+    border: none;
+    border-radius: 0.2rem;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+  
+  .button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.30),0 17px 50px 0 rgba(0,0,0,0.30);
+  }
+
+  .progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, #1b262c 35%, rgb(97, 95, 95) 100%);
+  height: 30px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 68%; }
+}

@@ -1,0 +1,15 @@
+{% extends 'phishingtest/base.html' %}
+
+{% block content %}
+<div>
+	<span style="text-align: center;"> PROBABILITY THAT IT IS A PHISHING WEBSITE IS: {{result}} </span>
+	<a class="button" style="text-align: center;" href="{% url 'phishingtest:index' %}"> Search more </a>
+	<br>
+	<div class="progress">
+        <div class="progress-value"></div>
+	</div>
+</div>
+ 
+
+
+{% endblock content %}

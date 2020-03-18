@@ -1,0 +1,25 @@
+
+{% extends 'phishingtest/base.html' %}
+
+{% block content %}
+ <link rel="stylesheet" type="text/css" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600,800,900" rel="stylesheet" type="text/css">
+        <link src="progress.js">
+<div class="alignment">
+<span>Hello, {{request.user}}</span>
+<br>
+	<form action="parser/" method="POST">
+				{% csrf_token %}
+<!-- 		<input type="text" name="url_input">
+		<input type="submit" name="submit" value="go"> -->
+		<div class="alignment">
+    <input type="text" class="form__input" id="name" placeholder="Enter URL" required="" name="url_input"/>
+    <br><br>
+    <button class="button" style="text-align: center;">Submit</button>
+    <br><br>
+</div>   
+	</form>
+	<br>
+<a class="button" href="{% url 'phishingtest:logout' %}">Logout</a>
+</div>
+	{% endblock content %}
