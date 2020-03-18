@@ -5,3 +5,5 @@ website.
 
 # LSTM model 
 A trained LSTM network is loaded onto to the app for predicting it's legitimacy.
+
+in branch v1 lel
