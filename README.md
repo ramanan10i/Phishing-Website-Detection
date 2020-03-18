@@ -7,3 +7,5 @@ website.
 A trained LSTM network is loaded onto to the app for predicting it's legitimacy.
 
 in branch v1 lel
+changes made in v1 branch
+good luck resolving
